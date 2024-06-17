@@ -1,0 +1,118 @@
+@use "../sass" as *
+
+.home
+    display: grid
+    grid-template-columns: 0.3fr 1.8fr
+    grid-template-rows: 0.3fr 2.6fr 0.1fr
+    gap: calc($spacing / 2) 0
+    grid-template-areas: "nav nav" "search items" "footer footer"
+    background-color: $color-primary-100
+
+
+    .nav
+        grid-area: nav
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px
+        justify-content: space-between
+        padding:0.5rem 3rem
+        z-index: 100
+        background-color:$color-secondary-400
+
+
+        svg
+            height:30px
+            width: auto
+
+            path
+                fill: $color-primary-800
+        
+        .cartCount
+            position: absolute
+            top: 0
+            right: 0
+            margin-inline-end: 3px
+            border-radius: 50%
+            width: 20px
+            height: 20px
+            background-color: #967bb6
+            color: $color-secondary-400
+
+
+    .search
+        grid-area: search
+        padding: 0 $spacing
+        h3
+            padding: calc($spacing / 2) 0
+        // background: purple
+
+    .items
+        overflow-y: auto
+        grid-area: items
+        padding: 0 $spacing
+
+        h2
+            padding: calc($spacing / 3) 0
+        
+        .cr
+            display: grid
+            grid-template-columns: repeat(4, 1fr)
+            grid-template-rows: repeat(7, 1fr)
+            gap: calc($spacing / 2)
+
+            .itemCr
+                width: 300px
+                height: 300px
+                background-color: $color-secondary-400
+                padding: 0.5rem
+                border: 1px solid $color-secondary-200
+                border-radius: calc($spacing / 2)
+                display: grid
+                grid-template-columns: 1fr 1fr
+                grid-template-rows: 1fr 1fr 1fr 1fr
+                grid-template-areas: "img img" "name name" "type seats" "price book" 
+
+                img 
+                    grid-area: img
+                    height: 150px
+                    width: 300px
+                    border-radius: calc($spacing / 2)
+
+                .carName
+                    grid-area: name
+                    font-weight: $fs-dark
+                    font-size: $fs-large
+
+
+    .footer
+        grid-area: footer
+        text-align: center
+        font-style: italic
+        color: $color-primary-200
+        font-size: $fs-small
+        font-weight: $fs-light
+
+.imgUploadBtn
+    position: absolute
+    bottom: 0
+    right: 0
+    border-radius: 50%
+    cursor: pointer
+
+    &:hover
+        background: #ccc
+
+    svg
+        width: 30px
+        height: 30px
+
+.userUpdateForm
+    svg
+        path
+            stroke: #000
+
+.bookingsModal
+    .modal-dialog,.modal-content
+        max-width: none !important
+        width: 90vw
+
+    // td
+        // text-align: center

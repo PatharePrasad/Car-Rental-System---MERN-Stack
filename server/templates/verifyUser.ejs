@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Verify Email</title>
+        <style>
+            body {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            main {
+                border-radius: 10px;
+                padding: 16px;
+                max-width: 600px;
+                width: 500px;
+                box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 3px;
+            }
+            .parent h1,
+            .parent p {
+                width: 100%;
+                text-align: start;
+            }
+            .linkBtn {
+                text-decoration: none;
+                background: rebeccapurple;
+                padding: 10px;
+                border-radius: 10px;
+                color: #fff;
+            }
+            pre {
+                width: 100%;
+                background: rgb(243, 234, 234);
+                color: rgb(114, 101, 101);
+            }
+            footer {
+                width: 100%;
+                text-align: center;
+                color: rgb(114, 101, 101);
+            }
+            path {
+                fill: rebeccapurple;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <h1>Email Verification</h1>
+            <p>Hello <%= name %>!</p>
+            <p><%= msg %> The link expires in 24 hours.</p>
+            <a href="<%= urlPath %>" target="_blank" class="linkBtn">Verify E-mail Address</a>
+            <p>If the above link doesn't work, copy paste the below URL in new tab.</p>
+            <pre><%= urlPath %></pre>
+            <footer>&copy; DriveEase - 2024</footer>
+        </main>
+    </body>
+</html>

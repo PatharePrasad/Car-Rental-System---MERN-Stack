@@ -1,0 +1,13 @@
+{
+    "name": "drive-ease",
+    "version": "1.0.0",
+    "license": "MIT",
+    "scripts": {
+        "start-frontend": "cd client && yarn start",
+        "start-backend": "cd server& yarn dev",
+        "serve": "concurrently -n \"C,S\" -c \"bgBlue,bgMagenta\" -p \"[{name}]\" \"yarn start-frontend\" \"yarn start-backend\""
+    },
+    "dependencies": {
+        "concurrently": "^8.2.2"
+    }
+}
