@@ -6,6 +6,7 @@ import { LogoSVG, UserPlaceholder } from "../assets";
 import { Bookings, NewBooking, UserProfile } from "../components";
 import { useApiPrivate, useSessionStorage } from "../hooks";
 import "./Home.sass";
+import PulseLoader from "react-spinners/PulseLoader";
 
 export default function Home() {
     const [cars, setCars] = useState([]);
@@ -208,7 +209,8 @@ export default function Home() {
                                 </div>
                             ))
                         ) : (
-                            <h2 className="danger">No Cars found!</h2>
+                            <PulseLoader color="#967bb6" style={{ display: "flex", justifyContent: "center", gridColumn: "1 / -1"}} />
+                            //<h2 className="danger">No Cars found!</h2>
                         )}
                     </div>
                 </div>

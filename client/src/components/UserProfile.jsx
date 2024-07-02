@@ -10,10 +10,10 @@ export default function UserProfile({ show, handleClose, user }) {
     const [nameError, setNameError] = useState("");
     const [password, setPassword] = useState("");
     const [passwordVisible, setPasswordVisible] = useState(false);
-    const [passwordError, setPasswordError] = useState(null);
+    const [passwordError, setPasswordError] = useState("");
     const [confPassword, setConfPassword] = useState("");
     const [confirmPasswordVisible, setConfirmPasswordVisible] = useState(false);
-    const [confirmPasswordError, setConfirmPasswordError] = useState(null);
+    const [confirmPasswordError, setConfirmPasswordError] = useState("");
     const [updateElem, setUpdateElem] = useState({});
     const [updatePassword, setUpdatePassword] = useState(false);
     const [isModified, setIsModified] = useState(false);

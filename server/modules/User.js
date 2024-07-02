@@ -50,6 +50,7 @@ const getDetails = async (req, res) => {
                 },
             },
         ]);
+        if (user.bookingDetails.length < 2 && user.bookingDetails[0].bookingId === null) user.bookingDetails = [];
         console.log(user);
         res.status(200).send(user);
     } catch (err) {

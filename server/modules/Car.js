@@ -48,6 +48,7 @@ const getAllCars = async (req, res) => {
                 _id: 0,
             },
         },
+        { $limit: 20 }  // Adjust the limit value as needed
     ]);
     // console.log(cars.length);
     res.status(200).send({ data: cars });
